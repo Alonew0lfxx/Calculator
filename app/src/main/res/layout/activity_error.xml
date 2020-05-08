@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333"
+    tools:context=".ErrorActivity">
+
+
+    <LinearLayout
+        android:id="@+id/aaa1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_error"
+            android:tint="#C51162" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:alpha=".85"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Bir Hata Meydana Geldi!"
+            android:textColor="#fff"
+            android:textSize="24dp" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_error"
+
+            android:tint="#C51162" />
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="5dp"
+        android:layout_below="@id/aaa1"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
+        app:cardBackgroundColor="#666">
+
+
+        <ScrollView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/errorCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="java.lang.NullPointerException at com.texter.messenger.SmsReceiverService$ServiceHandler.handleMessage(SmsReceiverService.java:116) at android.os.Handler.dispatchMessage(Handler.java:99) at android.os.Looper.loop(Looper.java:123) at android.os.HandlerThread.run(HandlerThread.java:60) , PHONE_MODEL : GT-I9000 , ANDROID_VERSION : 2.2 , APP_VERSION_CODE : 10 30.Nov.2011 00:33:50 AM , CUSTOM_DATA : , STACK_TRACE : java.lang.IllegalArgumentException: Receiver not registered: android.widget.ViewFlipper$1@40597cc0 at android.app.LoadedApk.forgetReceiverDispatcher(LoadedApk.java:634) at android.app.ContextImpl.unregisterReceiver(ContextImpl.java:881) at android.content.ContextWrapper.unregisterReceiver(ContextWrapper.java:331) at android.widget.ViewFlipper.onDetachedFromWindow(ViewFlipper.java:104) at android.view.View.dispatchDetachedFromWindow(View.java:6235) at"
+                android:textColor="#fff" />
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
